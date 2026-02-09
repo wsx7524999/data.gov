@@ -29,6 +29,25 @@ application repositories:
 -   catalog.data.gov (CKAN 2.11.2) [[repo](https://github.com/GSA/catalog.data.gov)]
 -   inventory.data.gov (CKAN 2.11.2) [[repo](https://github.com/GSA/inventory-app)]
 
+## Cloud.gov Integration
+
+This repository includes integration with cloud.gov for secure dataset management and release. The integration provides:
+
+- **Secure API Connection**: OAuth2 authentication with cloud.gov
+- **Dataset Management**: Fetch and release datasets programmatically
+- **Metadata Support**: Include user metadata with dataset releases
+- **Automation Tools**: Command-line scripts for batch operations
+
+For detailed documentation, see [Cloud.gov Integration Guide](docs/cloudgov-integration.md).
+
+Quick start:
+```bash
+cd metrics
+cp .env.example .env
+# Edit .env with your credentials
+python release_datasets.py --help
+```
+
 ## GitHub Actions and Templates
 
 A number of our GitHub Actions have been refactored to use templates in this
